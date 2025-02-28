@@ -1,0 +1,13 @@
+prefix=C:/Users/Arslan/Documents/reCaptchaV3_solver/reCaptchaV3_solver/reCaptcha_solver/Library
+exec_prefix=C:/Users/Arslan/Documents/reCaptchaV3_solver/reCaptchaV3_solver/reCaptcha_solver/Library
+libdir=C:/Users/Arslan/Documents/reCaptchaV3_solver/reCaptchaV3_solver/reCaptcha_solver/Library/lib
+sharedlibdir=C:/Users/Arslan/Documents/reCaptchaV3_solver/reCaptchaV3_solver/reCaptcha_solver/Library/lib
+includedir=C:/Users/Arslan/Documents/reCaptchaV3_solver/reCaptchaV3_solver/reCaptcha_solver/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
