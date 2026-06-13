@@ -11,6 +11,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from fake_useragent import UserAgent
 
+from dotenv import load_dotenv
+load_dotenv()
+
 def reCaptcha_solver(query):
     options = webdriver.ChromeOptions()
     ua = UserAgent()
@@ -45,7 +48,7 @@ def reCaptcha_solver(query):
 
     urllib.request.urlretrieve(src, path_to_mp3)
 
-    client = Groq(api_key="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")
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
     filename = os.path.normpath(os.path.join(os.getcwd(), "sample.mp3"))
 
     with open(filename, "rb") as file:
